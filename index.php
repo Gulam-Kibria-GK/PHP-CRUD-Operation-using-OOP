@@ -14,9 +14,9 @@
     <!-- include header -->
     <?php include("./layouts/header.php"); ?>
 
-    <section class="max-w-2xl w-full mx-auto my-10">
+    <section class="rounded-md bg-slate-300 max-w-2xl w-full mx-auto my-10 ">
         <form action="create.php" method="post">
-            <div class="grid grid-cols-2 gap-4">
+            <div class="px-5 grid grid-cols-2 gap-4 py-4">
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
                     <input type="text" name="name" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter Name">
@@ -47,7 +47,7 @@
                 </div>
             </div>
 
-            <div class="mb-4">
+            <div class="max-w-xl mx-auto mb-4">
                 <label for="description" class="block text-gray-700 text-sm font-bold mb-2">Description</label>
                 <textarea name="description" id="description" cols="30" rows="10" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
