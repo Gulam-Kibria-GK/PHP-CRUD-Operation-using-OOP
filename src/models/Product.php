@@ -29,7 +29,7 @@ class Product
 
     try {
       //dd(($this));
-      print_r("query executed");
+      //print_r("query executed");
       $db = new Database();
       $db->connect();
       $sql = "INSERT INTO student (name, email, password, role, description) VALUES (:name, :email, :password, :role, :description)";
@@ -39,9 +39,9 @@ class Product
       $stmt->bindParam(':password', $this->password);
       $stmt->bindParam(':role', $this->role);
       $stmt->bindParam(':description', $this->description);
-      print_r("query executed 2");
+      //print_r("query executed 2");
       $stmt->execute();
-      print_r("query executed 3");
+      //print_r("query executed 3");
 
       return true;
     } catch (\PDOException $e) {
