@@ -16,3 +16,31 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $product->store();
     }
 }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>created data</title>
+</head>
+
+<body>
+
+    <?php require_once('../layouts/header.php'); ?>
+
+    <section class="rounded-md bg-slate-300 max-w-6xl w-full mx-auto my-10 ">
+
+        <div>
+
+        </div>
+
+    </section>
+
+
+
+</body>
+
+</html>
