@@ -15,7 +15,7 @@
     <?php include("./layouts/header.php"); ?>
 
     <section class="rounded-md bg-slate-300 max-w-2xl w-full mx-auto my-10 ">
-        <form action="create.php" method="post">
+        <form action="products\create.php" method="post" enctype="multipart/form-data">
             <div class="px-5 grid grid-cols-2 gap-4 py-4">
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
@@ -56,9 +56,8 @@
                     <a href="index.php" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Clear</a>
                 </div>
                 <div class="mb-4">
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
+                    <button name="submit" type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
                 </div>
-
             </div>
         </form>
     </section>
