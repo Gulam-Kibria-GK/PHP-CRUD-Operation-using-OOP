@@ -1,3 +1,5 @@
+<?= $BASE_PATH = '.'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +18,7 @@
         <div class="bg-white shadow-md rounded-lg p-6 w-96 items-center justify-center">
             <h1 class="text-2xl font-semibold mb-4">Sign Up</h1>
             <!-- Sign Up Form -->
-            <form action="#" method="post">
+            <form action="./login.php" method="post">
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
                     <input type="text" name="name" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter Name">

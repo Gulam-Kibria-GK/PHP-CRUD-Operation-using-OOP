@@ -1,3 +1,5 @@
+<?= $BASE_PATH = '.'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +35,7 @@
                     <a href="#" class="text-gray-500 hover:underline">Forgot Password?</a>
                 </div>
                 <div class="mt-4 text-center">
-                    <a href="signUp.php" class="text-blue-600 hover:underline">
+                    <a href="./signUp.php" class="text-blue-600 hover:underline">
                         Sign Up
                     </a>
                 </div>

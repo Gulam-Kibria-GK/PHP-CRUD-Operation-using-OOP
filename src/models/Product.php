@@ -1,7 +1,7 @@
 <?php
 
-require_once '../utils.php';
-require_once '../src/database.php';
+require_once "./utils.php";
+require_once "./src/database.php";
 
 //use Database;
 
