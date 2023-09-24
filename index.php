@@ -3,8 +3,7 @@
 $BASE_PATH = '.';
 
 //require_once model Product.php
-require_once './src/models/Product.php';
-
+require_once "./src/models/Product.php";
 
 
 // Example user data array (replace this with data fetched from your database)
