@@ -1,5 +1,5 @@
 <?php
-$BASE_PATH = '../..';
+$BASE_PATH = "../.."
 ?>
 
 <!DOCTYPE html>
@@ -19,8 +19,11 @@ $BASE_PATH = '../..';
     <?php include("../../layouts/header.php"); ?>
 
     <section class="rounded-md bg-slate-300 max-w-2xl w-full mx-auto my-10 ">
-        <form action="#" method="post" enctype="multipart/form-data">
+        <form action="../products/create.php" method="POST" enctype="multipart/form-data">
             <div class="px-5 grid grid-cols-2 gap-4 py-4">
+
+                <input type="hidden" name="path" value=<?= $BASE_PATH; ?> placeholder="">
+
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
                     <input type="text" name="name" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter Name">
