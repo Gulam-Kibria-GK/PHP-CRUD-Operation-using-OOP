@@ -1,7 +1,9 @@
 <?php
 
-require_once "./utils.php";
-require_once "./src/database.php";
+require_once "$BASE_PATH/utils.php";
+require_once "$BASE_PATH/src/Database.php";
+
+
 
 //use Database;
 
@@ -58,9 +60,6 @@ class Product
   // public function show($id)
   // {
   //   //create a database class object
-
-
-
   // }
 
   //   public function update($name, $price)
