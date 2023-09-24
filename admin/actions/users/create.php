@@ -29,22 +29,26 @@ $BASE_PATH = "../../.."
                     <input type="text" name="name" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter Name">
                 </div>
                 <div class="mb-4">
-                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-                    <input type="text" name="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter Email">
+                    <label for="userid" class="block text-gray-700 text-sm font-bold mb-2">UserID</label>
+                    <input type="number" name="userid" id="userid" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="UserID">
                 </div>
                 <div class="mb-4">
-                    <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-                    <input type="password" name="password" id="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter Password">
+                    <label for="level" class="block text-gray-700 text-sm font-bold mb-2">Level</label>
+                    <input type="text" name="level" id="level" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Level">
                 </div>
                 <div class="mb-4">
-                    <label for="password_confirmation" class="block text-gray-700 text-sm font-bold mb-2">Confirm Password</label>
-                    <input type="password" name="password_confirmation" id="password_confirmation" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Confirm Password">
+                    <label for="group" class="block text-gray-700 text-sm font-bold mb-2">Group</label>
+                    <input type="text" name="group" id="group" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Group">
+                </div>
+                <div class="mb-4">
+                    <label for="roll" class="block text-gray-700 text-sm font-bold mb-2">Roll</label>
+                    <input type="number" name="roll" id="roll" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Roll">
                 </div>
                 <div class="mb-4">
                     <label for="role" class="block text-gray-700 text-sm font-bold mb-2">Role</label>
                     <select name="role" id="role" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                        <option value="admin">Admin</option>
-                        <option value="user">User</option>
+                        <option value="pass">Pass</option>
+                        <option value="fail">Fail</option>
                     </select>
                 </div>
 
