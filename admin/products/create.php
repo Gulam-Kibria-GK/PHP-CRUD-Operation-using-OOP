@@ -1,6 +1,11 @@
 <?php
 
-require_once "../../src/models/Product.php";
+$BASE_PATH = $_POST['path'];
+//print_r("test_code created");
+print_r($BASE_PATH);
+
+require_once "$BASE_PATH/src/models/Product.php";
+//dd($_POST);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST['submit'])) {
@@ -10,12 +15,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $role = $_POST["role"];
         $description = $_POST["description"];
 
-        dd($name);
+        //dd($name);
         $product = new Product($name, $email, $password, $role, $description);
-        $product->store();
+        // dd($product);
+        $success = $product->store();
+
+        if ($success) {
+            header("Location: $BASE_PATH/index.php");
+        } else {
+            echo "Something went wrong";
+        }
     }
 }
-?>
 
-<a href="../../index.php">
-</a>
+
+
+// go to the index page when submit button is clicked
+// header("Location: $BASE_PATH/index.php");
