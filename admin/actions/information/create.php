@@ -2,22 +2,20 @@
 
 $BASE_PATH = $_POST['path'];
 //print_r("test_code created");
-print_r($BASE_PATH);
-
 require_once "$BASE_PATH/src/models/Product.php";
 //dd($_POST);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST['submit'])) {
         $name = $_POST["name"];
-        $email = $_POST["email"];
-        $password = $_POST["password"];
+        $userid = $_POST["userid"];
+        $level = $_POST["level"];
+        $group = $_POST["group"];
+        $roll = $_POST["roll"];
         $role = $_POST["role"];
         $description = $_POST["description"];
-
-        //dd($name);
-        $product = new Product($name, $email, $password, $role, $description);
-        // dd($product);
+        //dd($_POST);
+        $product = new Product($name, $userid, $level, $group, $roll, $role, $description);
         $success = $product->store();
 
         if ($success) {
