@@ -3,50 +3,59 @@
 require_once "$BASE_PATH/utils.php";
 require_once "$BASE_PATH/src/Database.php";
 
-
-
 //use Database;
 
 class Product
 {
+
   private $name;
-  private $email;
-  private  $password;
+  private $userid;
+  private $level;
+  private $group;
+  private $roll;
   private $role;
   private $description;
 
   // constructor with name and price
-  public function __construct($name, $email, $password, $role, $description)
+  public function __construct($name, $userid, $level, $group, $roll, $role, $description)
   {
     $this->name = $name;
-    $this->email = $email;
-    $this->password = $password;
+    $this->userid = $userid;
+    $this->level = $level;
+    $this->group = $group;
+    $this->roll = $roll;
     $this->role = $role;
     $this->description = $description;
     //dd($this);
   }
   public function store()
   {
-    //print or show all the data for test
-
+    //new line afet print this text
+    //print_r("print or show all the data for test \n");
+    //dd($this);
     try {
-      //dd(($this));
-      //print_r("query executed");
+      print_r("query executed 1\n<br>");
       $db = new Database();
       $db->connect();
-      $sql = "INSERT INTO student (name, email, password, role, description) VALUES (:name, :email, :password, :role, :description)";
-      $stmt = $db->prepare($sql);
-      $stmt->bindParam(':name', $this->name);
-      $stmt->bindParam(':email', $this->email);
-      $stmt->bindParam(':password', $this->password);
-      $stmt->bindParam(':role', $this->role);
-      $stmt->bindParam(':description', $this->description);
-      //print_r("query executed 2");
-      $stmt->execute();
-      //print_r("query executed 3");
 
+      $sql = "INSERT INTO student (name, userid, level, `group`, roll, role, description) 
+              VALUES (:name, :userid, :level, :group, :roll, :role, :description)
+              ";
+      $stmt = $db->prepare($sql);
+
+      $stmt->bindParam(':name', $this->name);
+      $stmt->bindParam(':userid', $this->userid);
+      $stmt->bindParam(':level', $this->level);
+      $stmt->bindParam(':group', $this->group);
+      $stmt->bindParam(':roll', $this->roll);
+      $stmt->bindParam('role', $this->role);
+      $stmt->bindParam(':description', $this->description);
+      print_r("query executed 2<br>");
+      $stmt->execute();
+      print_r("query executed 3<br>");
       return true;
     } catch (\PDOException $e) {
+      print_r("\n");
       echo $e->getMessage();
       return false;
     }
