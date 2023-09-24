@@ -5,77 +5,132 @@ $BASE_PATH = '.';
 //require_once model Product.php
 require_once "./src/models/Product.php";
 
-
 // Example user data array (replace this with data fetched from your database)
 $users = [
     [
         'name' => 'John Doe',
-        'email' => 'john@example.com',
-        'role' => 'Admin',
-        'description' => 'A sample user description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur orci at justo hendrerit, sed congue tortor varius. Fusce nec metus a metus ultrices rhoncus a id metus. Integer tincidunt, odio vel tristique tempus, libero arcu ultrices libero, id fringilla felis tortor sit amet elit.',
-        'image' => 'path/to/john.jpg' // Replace with the actual image path
+        'userid' => '123456',
+        'level' => '2nd',
+        'group' => 'A',
+        'roll' => '1',
+        'role' => 'Pass',
+        'description' => 'Another sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
+        'image' => '/assets/images/a.jpg' // Replace with the actual image path
     ],
     [
-        'name' => 'Jane Smith',
-        'email' => 'jane@example.com',
-        'role' => 'User',
-        'description' => 'Another sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
-        'image' => 'path/to/jane.jpg' // Replace with the actual image path
-    ],
-    [
-        'name' => 'Jane Smith',
-        'email' => 'jane@example.com',
-        'role' => 'User',
-        'description' => 'Another sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
-        'image' => 'path/to/jane.jpg' // Replace with the actual image path
+        'name' => 'John Smith',
+        'userid' => '789012',
+        'level' => '3rd',
+        'group' => 'B',
+        'roll' => '2',
+        'role' => 'Fail',
+        'description' => 'A different sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
+        'image' => '/assets/images/a.jpg' // Replace with the actual image path
     ],
     [
         'name' => 'John Doe',
-        'email' => 'john@example.com',
-        'role' => 'Admin',
-        'description' => 'A sample user description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur orci at justo hendrerit, sed congue tortor varius. Fusce nec metus a metus ultrices rhoncus a id metus. Integer tincidunt, odio vel tristique tempus, libero arcu ultrices libero, id fringilla felis tortor sit amet elit.',
-        'image' => 'path/to/john.jpg' // Replace with the actual image path
+        'userid' => '123456',
+        'level' => '2nd',
+        'group' => 'A',
+        'roll' => '1',
+        'role' => 'Pass',
+        'description' => 'Another sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
+        'image' => '/assets/images/a.jpg' // Replace with the actual image path
     ],
     [
-        'name' => 'Jane Smith',
-        'email' => 'jane@example.com',
-        'role' => 'User',
-        'description' => 'Another sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
-        'image' => 'path/to/jane.jpg' // Replace with the actual image path
-    ],
-    [
-        'name' => 'Jane Smith',
-        'email' => 'jane@example.com',
-        'role' => 'User',
-        'description' => 'Another sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
-        'image' => 'path/to/jane.jpg' // Replace with the actual image path
+        'name' => 'John Smith',
+        'userid' => '789012',
+        'level' => '3rd',
+        'group' => 'B',
+        'roll' => '2',
+        'role' => 'Fail',
+        'description' => 'A different sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
+        'image' => '/assets/images/a.jpg' // Replace with the actual image path
     ],
     [
         'name' => 'John Doe',
-        'email' => 'john@example.com',
-        'role' => 'Admin',
-        'description' => 'A sample user description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur orci at justo hendrerit, sed congue tortor varius. Fusce nec metus a metus ultrices rhoncus a id metus. Integer tincidunt, odio vel tristique tempus, libero arcu ultrices libero, id fringilla felis tortor sit amet elit.',
-        'image' => 'path/to/john.jpg' // Replace with the actual image path
+        'userid' => '123456',
+        'level' => '2nd',
+        'group' => 'A',
+        'roll' => '1',
+        'role' => 'Pass',
+        'description' => 'Another sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
+        'image' => '/assets/images/a.jpg' // Replace with the actual image path
     ],
     [
-        'name' => 'Jane Smith',
-        'email' => 'jane@example.com',
-        'role' => 'User',
-        'description' => 'Another sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
-        'image' => 'path/to/jane.jpg' // Replace with the actual image path
+        'name' => 'John Smith',
+        'userid' => '789012',
+        'level' => '3rd',
+        'group' => 'B',
+        'roll' => '2',
+        'role' => 'Fail',
+        'description' => 'A different sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
+        'image' => '/assets/images/a.jpg' // Replace with the actual image path
     ],
     [
-        'name' => 'Jane Smith',
-        'email' => 'jane@example.com',
-        'role' => 'User',
+        'name' => 'John Doe',
+        'userid' => '123456',
+        'level' => '2nd',
+        'group' => 'A',
+        'roll' => '1',
+        'role' => 'Pass',
         'description' => 'Another sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
-        'image' => 'path/to/jane.jpg' // Replace with the actual image path
+        'image' => '/assets/images/a.jpg' // Replace with the actual image path
+    ],
+    [
+        'name' => 'John Smith',
+        'userid' => '789012',
+        'level' => '3rd',
+        'group' => 'B',
+        'roll' => '2',
+        'role' => 'Fail',
+        'description' => 'A different sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
+        'image' => '/assets/images/a.jpg' // Replace with the actual image path
+    ],
+    [
+        'name' => 'John Doe',
+        'userid' => '123456',
+        'level' => '2nd',
+        'group' => 'A',
+        'roll' => '1',
+        'role' => 'Pass',
+        'description' => 'Another sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
+        'image' => '/assets/images/a.jpg' // Replace with the actual image path
+    ],
+    [
+        'name' => 'John Smith',
+        'userid' => '789012',
+        'level' => '3rd',
+        'group' => 'B',
+        'roll' => '2',
+        'role' => 'Fail',
+        'description' => 'A different sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
+        'image' => '/assets/images/a.jpg' // Replace with the actual image path
+    ],
+    [
+        'name' => 'John Doe',
+        'userid' => '123456',
+        'level' => '2nd',
+        'group' => 'A',
+        'roll' => '1',
+        'role' => 'Pass',
+        'description' => 'Another sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
+        'image' => '/assets/images/a.jpg' // Replace with the actual image path
+    ],
+    [
+        'name' => 'John Smith',
+        'userid' => '789012',
+        'level' => '3rd',
+        'group' => 'B',
+        'roll' => '2',
+        'role' => 'Fail',
+        'description' => 'A different sample user description. Duis nec dapibus velit, ut consequat velit. Nulla ac libero vitae augue cursus dictum ac eget elit. Sed nec felis a libero fermentum venenatis. Nullam id dignissim odio. Integer nec congue orci, non fermentum augue. Donec feugiat sapien vel turpis aliquet.',
+        'image' => '/assets/images/a.jpg' // Replace with the actual image path
     ],
 
     // Add more user data here
 ];
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,8 +155,12 @@ $users = [
                         <img src="<?php echo $user['image']; ?>" alt="<?php echo $user['name']; ?>" class="w-12 h-12 rounded-full">
                         <div class="ml-2">
                             <h2 class="text-lg font-semibold text-blue-700"><?php echo $user['name']; ?></h2>
-                            <p class="text-sm text-gray-600"><?php echo $user['email']; ?></p>
-                            <p class="text-xs text-gray-500"><?php echo $user['role']; ?></p>
+                            <p class="text-sm text-gray-600"><?php echo 'Level: ' . $user['level']; ?></p>
+                            <p class="text-sm text-gray-600"><?php echo 'Group: ' . $user['group']; ?></p>
+                        </div>
+                        <div class="ml-2 mt-7">
+                            <p class="text-sm text-gray-600"><?php echo 'Roll: ' . $user['roll']; ?></p>
+                            <p class="text-sm text-gray-600"><?php echo 'Role: ' . $user['role']; ?></p>
                         </div>
                     </div>
                     <p class="text-sm description"><?php echo substr($user['description'], 0, 100); ?></p>
@@ -139,7 +198,6 @@ $users = [
             });
         });
     </script>
-
 
 </body>
 
