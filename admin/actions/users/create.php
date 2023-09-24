@@ -19,7 +19,7 @@ $BASE_PATH = "../../.."
     <?php include("../../../layouts/header.php"); ?>
 
     <section class="rounded-md bg-slate-300 max-w-2xl w-full mx-auto my-10 ">
-        <form action="../products/create.php" method="POST" enctype="multipart/form-data">
+        <form action="../information/create.php" method="POST" enctype="multipart/form-data">
             <div class="px-5 grid grid-cols-2 gap-4 py-4">
 
                 <input type="hidden" name="path" value=<?= $BASE_PATH; ?> placeholder="">
