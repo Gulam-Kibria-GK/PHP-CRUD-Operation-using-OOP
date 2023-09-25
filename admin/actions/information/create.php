@@ -1,9 +1,12 @@
 <?php
 
-$BASE_PATH = $_POST['path'];
-//print_r("test_code created");
-require_once "$BASE_PATH/src/models/StudentInfo.php";
-//dd($_POST);
+//$BASE_PATH = $_POST['path'];
+//require_once "$BASE_PATH/src/models/StudentInfo.php";
+
+require_once '../../../vendor/autoload.php';
+
+use App\Models\StudentInfo;
+
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST['submit'])) {
@@ -19,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $success = $Student->store();
 
         if ($success) {
-            header("Location: $BASE_PATH/index.php");
+            header("Location: ../../../index.php");
         } else {
             echo "Something went wrong";
         }
