@@ -2,7 +2,7 @@
     "name": "gk-chowdhury/crud-php-oop",
     "autoload": {
         "psr-4": {
-            "GkChowdhury\\CrudPhpOop\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [
