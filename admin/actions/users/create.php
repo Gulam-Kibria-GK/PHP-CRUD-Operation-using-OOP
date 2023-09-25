@@ -22,7 +22,7 @@ $BASE_PATH = "../../.."
         <form action="../information/create.php" method="POST" enctype="multipart/form-data">
             <div class="px-5 grid grid-cols-2 gap-4 py-4">
 
-                <input type="hidden" name="path" value=<?= $BASE_PATH; ?> placeholder="">
+                <!-- <input type="hidden" name="path" value=<?= $BASE_PATH; ?> placeholder=""> -->
 
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
