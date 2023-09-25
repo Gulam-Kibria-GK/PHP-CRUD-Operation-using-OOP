@@ -30,13 +30,9 @@ class StudentInfo
     $this->roll = $roll;
     $this->role = $role;
     $this->description = $description;
-    //dd($this);
   }
   public function store()
   {
-    //new line afet print this text
-    //print_r("print or show all the data for test \n");
-    //dd($this);
 
     try {
       print_r("query executed 1\n<br>");
@@ -66,28 +62,84 @@ class StudentInfo
     }
   }
 
+  public function show_one($id)
+  {
+    //create a database class object
+    $db = new Database();
+    $db->connect();
+    $sql = "SELECT * FROM student WHERE userid = :id";
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+    $result = $stmt->fetch();
+    return $result;
+  }
 
-  //   public function index()
-  //   {
-  //   }
+  public function show_all()
+  {
+    //create a database class object
+    $db = new Database();
+    $db->connect();
 
-  // public function show($id)
-  // {
-  //   //create a database class object
-  // }
+    $sql = "SELECT * FROM student";
 
-  //   public function update($name, $price)
-  //   {
-  //   }
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll();
+    return $result;
+  }
 
-  //   public function delete($id)
-  //   {
-  //   }
 
-  //   // destructor
-  //   public function __destruct()
-  //   {
-  //     $db->close();
-  //   }
-  // }
+  public function update($id)
+  {
+
+    // echo '<pre>';
+    // var_dump($this);
+    // die;
+    try {
+      //print_r("query executed 1\n<br>");
+      $db = new Database();
+      $db->connect();
+      $sql = "UPDATE student SET name = :name, userid = :userid, level = :level, `group` = :group, roll = :roll, role = :role, description = :description WHERE userid = :id";
+      $stmt = $db->prepare($sql);
+      $stmt->bindParam(':name', $this->name);
+      $stmt->bindParam(':userid', $this->userid);
+      $stmt->bindParam(':level', $this->level);
+      $stmt->bindParam(':group', $this->group);
+      $stmt->bindParam(':roll', $this->roll);
+      $stmt->bindParam('role', $this->role);
+      $stmt->bindParam(':description', $this->description);
+      $stmt->bindParam(':id', $id);
+      $stmt->execute();
+      return true;
+    } catch (\PDOException $e) {
+      print_r("\n");
+      echo $e->getMessage();
+      return false;
+    }
+  }
+
+  public function delete($id)
+  {
+    try {
+      $db = new Database();
+      $db->connect();
+      $sql = "DELETE FROM student WHERE userid = :id";
+      $stmt = $db->prepare($sql);
+      $stmt->bindParam(':id', $id);
+      $stmt->execute();
+      return true;
+    } catch (\PDOException $e) {
+      print_r("\n");
+      echo $e->getMessage();
+      return false;
+    }
+  }
+
+  // destructor
+  public function __destruct()
+  {
+    //$db = new Database();
+    //$db->close();
+  }
 }
