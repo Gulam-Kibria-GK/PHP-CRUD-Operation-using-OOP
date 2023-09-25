@@ -121,6 +121,9 @@ class StudentInfo
 
   public function delete($id)
   {
+    // echo '<pre>';
+    // var_dump($id);
+    // die;
     try {
       $db = new Database();
       $db->connect();
