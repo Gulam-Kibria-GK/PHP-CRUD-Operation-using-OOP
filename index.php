@@ -3,7 +3,10 @@
 $BASE_PATH = '.';
 
 //require_once model Product.php
-require_once "./src/models/StudentInfo.php";
+//require_once "./src/models/StudentInfo.php";
+require_once './vendor/autoload.php';
+
+use App\Models\StudentInfo;
 
 // Example user data array (replace this with data fetched from your database)
 $users = [
