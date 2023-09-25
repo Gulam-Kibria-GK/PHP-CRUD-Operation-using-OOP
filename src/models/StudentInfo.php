@@ -1,9 +1,13 @@
 <?php
 
-require_once "$BASE_PATH/utils.php";
-require_once "$BASE_PATH/src/Database.php";
+// require_once '../../vendor/autoload.php';
 
-//use Database;
+namespace App\Models;
+
+//require_once "$BASE_PATH/utils.php";
+
+
+use App\Database;
 
 class StudentInfo
 {
