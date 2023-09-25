@@ -5,7 +5,6 @@ require_once './vendor/autoload.php';
 require_once './admin/actions/information/show.php';
 
 
-
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +44,7 @@ require_once './admin/actions/information/show.php';
                     <a href="#" class="text-blue-600 hover:underline read-more">Read more</a>
                     <div class="mt-2 flex space-x-2">
                         <a href="./admin/actions/users/edit.php?id=<?php echo $user['userid']; ?>" class=" text-green-600 hover:underline">Edit</a>
-                        <a href="#" class="text-red-600 hover:underline">Delete</a>
+                        <a href="./admin/actions/information/delete.php?id=<?php echo $user['userid']; ?>" class="text-red-600 hover:underline">Delete</a>
                     </div>
                 </div>
             <?php endforeach; ?>
