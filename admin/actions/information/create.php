@@ -2,7 +2,7 @@
 
 $BASE_PATH = $_POST['path'];
 //print_r("test_code created");
-require_once "$BASE_PATH/src/models/Product.php";
+require_once "$BASE_PATH/src/models/StudentInfo.php";
 //dd($_POST);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -15,8 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $role = $_POST["role"];
         $description = $_POST["description"];
         //dd($_POST);
-        $product = new Product($name, $userid, $level, $group, $roll, $role, $description);
-        $success = $product->store();
+        $Student = new StudentInfo($name, $userid, $level, $group, $roll, $role, $description);
+        $success = $Student->store();
 
         if ($success) {
             header("Location: $BASE_PATH/index.php");
