@@ -1,9 +1,9 @@
 <!-- <?php
 
 
-        require '../src/Product.php';
+        //require '../src/Product.php';
 
-        use Product;
+        //use Product;
 
         //$productObj = new Product();
 

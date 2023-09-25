@@ -5,7 +5,7 @@ require_once "$BASE_PATH/src/Database.php";
 
 //use Database;
 
-class Product
+class StudentInfo
 {
 
   private $name;
@@ -33,6 +33,7 @@ class Product
     //new line afet print this text
     //print_r("print or show all the data for test \n");
     //dd($this);
+
     try {
       print_r("query executed 1\n<br>");
       $db = new Database();
