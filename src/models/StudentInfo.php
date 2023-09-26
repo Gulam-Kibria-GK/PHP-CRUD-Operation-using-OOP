@@ -142,7 +142,7 @@ class StudentInfo
   // destructor
   public function __destruct()
   {
-    //$db = new Database();
-    //$db->close();
+    $db = new Database();
+    $db->close();
   }
 }

@@ -3,18 +3,11 @@ $BASE_PATH = "../../..";
 
 $id = $_GET['id'];
 
-// print_r($id);
-// die;
 require_once '../../../vendor/autoload.php';
 
 use App\Models\StudentInfo;
 
-
 $Student = new StudentInfo('', '', '', ',', '', '', '');
-
-// print_r($id);
-// print_r('<br>');
-
 $user = $Student->show_one($id);
 
 // echo '<pre>';
